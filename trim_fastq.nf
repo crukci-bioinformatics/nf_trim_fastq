@@ -26,7 +26,20 @@ process runFastp {
         fastqR2Out = "${id}.r_2.trimmed.fastq.gz"
         fastpHtml = "${id}.fastp.html"
         fastpJson = "${id}.fastp.json"
-        template 'Trimming_with_Fastp.sh'
+        """
+        fastp \
+            -i ${fastqR1In} \
+            -I ${fastqR2In} \
+            -o ${fastqR1Out} \
+            -O ${fastqR2Out} \
+            --detect_adapter_for_pe \
+            -g \
+            -x \
+            -j ${fastpJson} \
+            -h ${fastpHtml} \
+            --thread 8 \
+            ${params.fastpOptions}
+        """
 }
 
 process runFastqc {
