@@ -3,9 +3,6 @@
 // enable DSL 2 syntax
 nextflow.enable.dsl = 2
 
-// include functions
-include { displayParameters } from './functions/configuration'
-
 process runFastp {
     publishDir "${launchDir}/${params.outputDir}", mode: 'link'
 
@@ -83,8 +80,17 @@ process runMultiqc {
         """
 }
 
-
-displayParameters(params)
+/*
+ * Write a log message summarising how the pipeline is configured and the
+ * locations of reference files that will be used.
+ */
+params.with
+{
+    log.info "Input fastq direcotry: ${inputDir}"
+    log.info "Timmed fastq directory: ${outputDir}"
+    log.info "Fastq glob: ${fastqPattern}"
+    log.info "Additional options for fastp: ${fastpOptions}"
+}
 
 workflow {
     fastqChannel = Channel.fromFilePairs("${params.inputDir}/${params.fastqPattern}", flat: true)
