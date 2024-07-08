@@ -9,13 +9,17 @@ and gathers both the `fastqc` and `fastp` reports into a single report using
 ## Usage
 
 ```
-nextflow run trim_fastq.nf
+nextflow run crukci-bioinformatics/nf_trim_fastq
 ```
 
 ## Conda environment
 
-The workflow uses a conda environment to manage dependencies. The environment
-file is `conda.yaml`.
+The workflow uses a conda environment to manage dependencies. You will need to
+have a conda installation with mamba. Miniforge is recommended: 
+
+https://github.com/conda-forge/miniforge
+
+The environment file is `conda.yaml`.
 
 ## Input
 
