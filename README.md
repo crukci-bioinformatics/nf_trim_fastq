@@ -28,7 +28,7 @@ Additional  parameters are:
 
 * `--outputDir` - the directory to write the trimmed fastq files to. By default,
   the trimmed files and reports are written to a directory called
-  `fastq_trimeed` in the current working directory.
+  `fastq_trimmed` in the current working directory.
 * `--fastqPattern` - a glob pattern to match the fastq files. By default, the
   workflow will match files ending in `r_{1,2}.fq.gz`. The `r_{1,2}` part of
   the pattern detects the read 1 and read 2 files of paired end data.
@@ -37,7 +37,7 @@ Additional  parameters are:
 ```
     --detect_adapter_for_pe \
     -g \
-    -x \
+    -x
 ```
 
 
