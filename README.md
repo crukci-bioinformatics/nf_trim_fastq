@@ -14,11 +14,7 @@ nextflow run crukci-bioinformatics/nf_trim_fastq
 
 ## Conda environment
 
-The workflow uses a conda environment to manage dependencies. You will need to
-have a conda installation with mamba. Miniforge is recommended: 
-
-https://github.com/conda-forge/miniforge
-
+The workflow uses a conda environment to manage dependencies.
 The environment file is `conda.yaml`.
 
 ## Input
