@@ -9,6 +9,7 @@ and gathers both the `fastqc` and `fastp` reports into a single report using
 `multiqc`.
 
 https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+
 https://multiqc.info/
 
 ## Usage
