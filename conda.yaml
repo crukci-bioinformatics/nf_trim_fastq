@@ -2,8 +2,7 @@ name: trim_fastq_pipeline
 channels:
   - conda-forge
   - bioconda
-  - defaults
 dependencies:
-  - fastqc=0.12.1
-  - fastp=0.23.4
-  - multiqc=1.22.3
+  - fastp=1.4.0
+  - fastqc=0.13.0
+  - multiqc=1.35

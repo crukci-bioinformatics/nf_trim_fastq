@@ -1,0 +1,5 @@
+work/
+.nextflow/
+.nextflow.log*
+test_outputs/
+fastq_trimmed/
